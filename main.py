@@ -1,3 +1,4 @@
+import math
 class Vector2d:
     def __init__(self,x,y):
         self.x = x
@@ -11,4 +12,10 @@ class Vector2d:
     def __neg__(self):
         return Vector2d(self.x*-1,self.y*-1)
     def __add__(self,other):
-        return Vector2d((self.x + other.x),(self.y + other.y)))
+        return Vector2d((self.x + other.x),(self.y + other.y))
+    def __eq__(self,other):
+        return (self.x == other.x, self.y == other.y)
+    def __sub__(self,other):
+        return (self.x - other.x, self.y - other.y)
+    def angle(self):
+        return (math.degrees(self.x),math.degrees(self.y))
