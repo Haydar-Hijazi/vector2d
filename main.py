@@ -10,12 +10,12 @@ class Vector2d:
     def __abs__(self):
         return((self.x **2)+(self.y**2))**(1/2)
     def __neg__(self):
-        return Vector2d(self.x*-1,self.y*-1)
+        return Vector2d(-self.x,-self.y)
     def __add__(self,other):
         return Vector2d((self.x + other.x),(self.y + other.y))
     def __eq__(self,other):
         return (self.x == other.x, self.y == other.y)
     def __sub__(self,other):
-        return (self.x - other.x, self.y - other.y)
+        return Vector2d(self.x - other.x, self.y - other.y)
     def angle(self):
-        return (math.degrees(self.x),math.degrees(self.y))
+        return (math.degrees(math.atan2(self.y,self.x)))
