@@ -32,3 +32,17 @@
 - 2/23/23
 
     - Write a method called `angle` that has `self` as its only parameter and returns the arctangent **in degrees** of the vector's `y` and `x` components. **NOTE:** You'll want to consult the documentation for [`math.atan2(y, x)`](https://docs.python.org/3/library/math.html#math.atan2) and [`math.degrees(x)`](https://docs.python.org/3/library/math.html#math.degrees)
+
+- 2/28/23
+
+    ### `flash_cards.py`
+    - Write a function called `print_conversion` that takes two positional arguments: a `Vector2d` object and a string.
+        - If the string is "polar", the flash card should display a conversion *from* rectangular **to** polar form like so:
+        ![Flash card for vector conversion from rectangular to polar form](img/to_polar.png)
+        - If the string is "rectangular", the flash card should display a conversion *from* polar **to** rectangular form like so:
+        ![Flash card for vector conversion from rectangular to polar form](img/to_rectangular.png)
+
+- 3/1/23
+    ### `flash_cards.py`
+    - Write a function called `generate_vector` that takes **no arguments** and returns a `Vector2d` object with **integer** x- and y- components randomly generated between -20 and 20.
+    - Write a function called `print_conversion_solution` that takes **two arguments**, a `Vector2d` object and a string (like with your `print_conversion` function) that prints the solution to a conversion problem for a given vector and form. The output should be visually consistent with the output your `print_conversion` function generates. 
