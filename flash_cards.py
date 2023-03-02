@@ -6,7 +6,7 @@ def print_conversion(vector,type):
     if type == "polar":
       print(vector)
     if type == "rectangular":
-      print(f"{vector.angle()} + {abs(vector)}")
+      print(f"{abs(vector)} + {vector.angle()}")
     print("-"*30)
     print(f"to {type} form")
     print("-" * 30)
