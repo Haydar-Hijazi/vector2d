@@ -33,23 +33,9 @@ def print_rectangular_conversion_solution(vector):
    print("-"*30)
    print(vector)
    print("-" * 30)
-#Menu
-def main_menu():
- print("="*20)
- print("Flash Cards")
- print("1. Conversions")
- print("2. Addition")
- print("q. Quit")
- print("Choose an option!")
- print("="*20,"\n")
- mode = input("> ")
- if mode == "q":
-  print("\nGoodbye!")
-  quit()
- if mode == "2":
-   pass
- if mode == "1":
-  if __name__ == '__main__':
+#Conversion Menu
+def conversion_menu():
+   if __name__ == '__main__':
     while True:
       print("="*25)
       print("Choose Conversion:")
@@ -82,21 +68,37 @@ def main_menu():
        mixed = random.randint(1,2)
        if mixed == 1:
          print_polar_conversion(b)
+         print("Press Enter to see the answer")
+         input()
+         print_polar_conversion_solution(b)
+         print("Press Enter to continue")
+         input()
        if mixed == 2:
-        print_rectangular_conversion(b)
-        print("Press Enter to see the answer")
-       input()
-       if mixed == 1:
-        print_polar_conversion_solution(b)
-        print("Press Enter to continue")
-        input()
-       if mixed == 2:
-        print_rectangular_conversion_solution(b)
-        print("Press Enter to continue")
-        input()
-       
-
+         print_rectangular_conversion(b)
+         print("Press Enter to see the answer")
+         input()
+         print_rectangular_conversion_solution(b)
+         print("Press Enter to continue")
+         input()
+#Menu
+def main_menu():
+ print("="*20)
+ print("Flash Cards")
+ print("1. Conversions")
+ print("2. Addition")
+ print("q. Quit")
+ print("Choose an option!")
+ print("="*20,"\n")
+ mode = input("> ")
+ if mode == "q":
+  print("\nGoodbye!")
+  quit()
+ if mode == "2":
+   pass
+ if mode == "1":
+   print(conversion_menu())
  else:
    print("\n!!!Please choose one of the available options!!!\n")
    print(main_menu())
+
 print(main_menu())
