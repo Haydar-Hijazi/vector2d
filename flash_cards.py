@@ -45,10 +45,10 @@ def conversion_menu():
       print("q. Return to Main Menu")
       print("="*25)
       practice = input()
+      a = generate_vector()
       if practice == "q":
        print(main_menu())
       if practice == "p":
-       a = generate_vector()
        print_polar_conversion(a)
        print("Press Enter to see the answer")
        input()
@@ -56,7 +56,6 @@ def conversion_menu():
        print("Press Enter to continue")
        input()
       if practice == "r":
-       a = generate_vector()
        print_rectangular_conversion(a)
        print("Press Enter to see the answer")
        input()
@@ -64,22 +63,24 @@ def conversion_menu():
        print("Press Enter to continue")
        input()
       if practice == "m":
-       b = generate_vector()
        mixed = random.randint(1,2)
        if mixed == 1:
-         print_polar_conversion(b)
+         print_polar_conversion(a)
          print("Press Enter to see the answer")
          input()
-         print_polar_conversion_solution(b)
+         print_polar_conversion_solution(a)
          print("Press Enter to continue")
          input()
        if mixed == 2:
-         print_rectangular_conversion(b)
+         print_rectangular_conversion(a)
          print("Press Enter to see the answer")
          input()
-         print_rectangular_conversion_solution(b)
+         print_rectangular_conversion_solution(a)
          print("Press Enter to continue")
          input()
+#Addition Menu
+def addition_menu():
+ pass
 #Menu
 def main_menu():
  print("="*20)
@@ -94,7 +95,7 @@ def main_menu():
   print("\nGoodbye!")
   quit()
  if mode == "2":
-   pass
+   print(addition_menu())
  if mode == "1":
    print(conversion_menu())
  else:
