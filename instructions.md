@@ -32,3 +32,44 @@
 - 2/23/23
 
     - Write a method called `angle` that has `self` as its only parameter and returns the arctangent **in degrees** of the vector's `y` and `x` components. **NOTE:** You'll want to consult the documentation for [`math.atan2(y, x)`](https://docs.python.org/3/library/math.html#math.atan2) and [`math.degrees(x)`](https://docs.python.org/3/library/math.html#math.degrees)
+
+- 2/28/23
+
+    ### `flash_cards.py`
+    - Write a function called `print_conversion` that takes two positional arguments: a `Vector2d` object and a string.
+        - If the string is "polar", the flash card should display a conversion *from* rectangular **to** polar form like so:
+        ![Flash card for vector conversion from rectangular to polar form](img/to_polar.png)
+        - If the string is "rectangular", the flash card should display a conversion *from* polar **to** rectangular form like so:
+        ![Flash card for vector conversion from rectangular to polar form](img/to_rectangular.png)
+
+- 3/1/23
+    ### `flash_cards.py`
+    - Write a function called `generate_vector` that takes **no arguments** and returns a `Vector2d` object with **integer** x- and y- components randomly generated between -20 and 20.
+    - Write a function called `print_conversion_solution` that takes **two arguments**, a `Vector2d` object and a string (like with your `print_conversion` function) that prints the solution to a conversion problem for a given vector and form. The output should be visually consistent with the output your `print_conversion` function generates. 
+
+- 3/3/23
+    ### `flash_cards.py`
+    Now that you've written the `generate_vector`, `print_conversion`, and `print_conversion_solution` functions, it's time to put them to work!
+    Copy the following code snippet to the bottom of `flash_cards.py`:
+    ```python
+    if __name__ == '__main__':
+        while True:
+            # Your code goes in this (infinite) loop
+
+
+            # But don't forget to break at the right time!
+            break
+    ```
+    Inside the infinite loop, you'll do the following:
+    - Ask the user if they'd like to practice conversions to rectangular or polar form.
+    - Display a question of the appropriate type based on their answer.
+    - Wait for user input before displaying the (correct!) answer.
+    - Ask the user if they'd like to receive another question, or quit.
+    - Respond accordingly.
+
+- 3/6/23
+    ### `flash_cards.py`
+    Currently we have two functions, `print_conversion` and `print_conversion_solution` that each encompass two separate behaviors - one for rectangular problems and one for polar problems. We're going to *refactor* these functions into separate functions for each type of problem. 
+    - Rewrite the `print_conversion` function as **two** separate functions: `print_polar_conversion`, which prints a conversion **from** rectangular **to** polar form, and `print_rectangular_conversion`, which prints a conversion **from** polar **to** rectangular form.
+    - Repeat this process for `print_conversion_solution` - when you're done you should have a `print_polar_solution` and a `print_rectangular_solution` function.
+    **Note:** Each of these functions will now only accept *one* argument (a vector), since the type of conversion is dealt with when the function is chosen.
